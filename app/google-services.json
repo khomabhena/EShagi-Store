@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "1017983101729",
+    "firebase_url": "https://eshagi-3d1c3.firebaseio.com",
+    "project_id": "eshagi-3d1c3",
+    "storage_bucket": "eshagi-3d1c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017983101729:android:b5c5500556fa51acf42c60",
+        "android_client_info": {
+          "package_name": "tech.astromobile.e_shagi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1017983101729-01220hclrnv6tjccidqlm7e5hhsuqjl0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tech.astromobile.e_shagi",
+            "certificate_hash": "d3cb366a358ae0476e309faf019081ebbc1dda8b"
+          }
+        },
+        {
+          "client_id": "1017983101729-f4cu6f2npeqqqdvg8s74fain6qnlpmps.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFwn7PBGlt4V4RnKaKvPLTv7KZRY2_7Dk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1017983101729-f4cu6f2npeqqqdvg8s74fain6qnlpmps.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017983101729:android:602fb05dfe9ba415f42c60",
+        "android_client_info": {
+          "package_name": "tech.astromobile.e_shagi.merchant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1017983101729-f4cu6f2npeqqqdvg8s74fain6qnlpmps.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFwn7PBGlt4V4RnKaKvPLTv7KZRY2_7Dk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1017983101729-f4cu6f2npeqqqdvg8s74fain6qnlpmps.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017983101729:android:8d849a8e5ef7be13f42c60",
+        "android_client_info": {
+          "package_name": "tech.astromobile.merchant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1017983101729-f4cu6f2npeqqqdvg8s74fain6qnlpmps.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFwn7PBGlt4V4RnKaKvPLTv7KZRY2_7Dk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1017983101729-f4cu6f2npeqqqdvg8s74fain6qnlpmps.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

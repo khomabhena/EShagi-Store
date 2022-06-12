@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitish"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Login"
+    tools:showIn="@layout/activity_login">
+
+    <View
+        android:id="@+id/viewBackground"
+        android:background="@color/colorPrimaryLight"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="150dp" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:text="E-"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMuto"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="Shagi"
+        android:textColor="@color/colorYellow"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/tvTitle"
+        app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:src="@drawable/shagi3"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="@id/card1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="@id/card1"
+        app:srcCompat="@drawable/ic_support"
+        android:padding="13dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/ivLogo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="@id/tvTitleSupport"
+                app:layout_constraintRight_toRightOf="@id/etNationalID"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/tvTitleSupport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Merchant Login"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/colorPrimaryLight"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <EditText
+                android:id="@+id/etNationalID"
+                android:inputType="number"
+                android:hint="Licence Number"
+                android:background="@drawable/edit_text_background"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="4dp"
+                android:textSize="15sp"
+                android:gravity="center_vertical"
+                android:paddingBottom="12dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:minWidth="200dp"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleSupport"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/etOTP"
+                android:inputType="number"
+                android:hint="Enter your OTP"
+                android:background="@drawable/edit_text_background"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="4dp"
+                android:textSize="15sp"
+                android:gravity="center_vertical"
+                android:paddingBottom="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:minWidth="200dp"
+                app:layout_constraintTop_toBottomOf="@id/etNationalID"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardLogin"
+                android:onClick="openLogin"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="1px"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="48dp"
+                app:cardBackgroundColor="@color/colorPrimaryLight"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintTop_toBottomOf="@id/etOTP"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:text="Login"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:layout_gravity="center"
+                    android:paddingTop="4dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:onClick="openPlayStore"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="1px"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="24dp"
+                app:cardBackgroundColor="@color/whitish"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintTop_toBottomOf="@id/cardLogin"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:text="Not yet registered? Register!!"
+                    android:textColor="@color/grayish"
+                    android:textSize="15sp"
+                    android:layout_gravity="center"
+                    android:paddingTop="4dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/ivLogo2"
+                android:src="@drawable/shagi"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

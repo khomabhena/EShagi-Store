@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitish"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Checkout"
+    tools:showIn="@layout/activity_checkout">
+
+    <View
+        android:id="@+id/viewBackground"
+        android:background="@color/colorPrimaryLight"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="150dp" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:text="merchant"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/shagiGray"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/ivLogo"
+        app:layout_constraintRight_toRightOf="@id/ivLogo"
+        app:layout_constraintTop_toBottomOf="@id/ivLogo" />
+
+    <TextView
+        android:id="@+id/tvMerchantName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="end"
+        android:text="Mercury Developers"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+        app:layout_constraintLeft_toRightOf="@id/tvTitle"/>
+
+    <TextView
+        android:id="@+id/tvMuto"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="Shagi"
+        android:textColor="@color/colorYellow"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/tvTitle"
+        app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:src="@drawable/shagi3"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="@id/scroll"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="@id/scroll"
+        app:srcCompat="@drawable/ic_support"
+        android:padding="13dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:fillViewport="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/ivLogo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:background="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="18dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_marginBottom="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:visibility="gone"
+                        android:layout_marginRight="18dp"
+                        app:layout_constraintTop_toTopOf="@id/tvTitleSupport"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+
+                    <TextView
+                        android:id="@+id/tvTitleSupport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order Checkout"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="@color/colorPrimaryLight"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvYourReceipt"
+                        android:text="Your receipt"
+                        android:textColor="@color/shagiGray"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="24dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvTitleSupport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvSubT"
+                        android:text="Sub Total"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintLeft_toLeftOf="@id/tvYourReceipt"
+                        app:layout_constraintTop_toBottomOf="@id/tvYourReceipt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvSubTotal"
+                        android:text="$12.00"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="24dp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvSubT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvServiceC"
+                        android:text="Service Charge"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintLeft_toLeftOf="@id/tvYourReceipt"
+                        app:layout_constraintTop_toBottomOf="@id/tvSubT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvServiceCharge"
+                        android:text="$1.00"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="24dp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvServiceC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvTot"
+                        android:text="Total"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="24dp"
+                        app:layout_constraintLeft_toLeftOf="@id/tvYourReceipt"
+                        app:layout_constraintTop_toBottomOf="@id/tvServiceC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvTotal"
+                        android:text="$13.00"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:padding="5dp"
+                        android:background="@drawable/text_solid_shagi_gray"
+                        app:layout_constraintTop_toTopOf="@id/tvTot"
+                        app:layout_constraintRight_toRightOf="@id/tvSubTotal"
+                        app:layout_constraintBottom_toBottomOf="@id/tvTot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/card1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_marginBottom="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvCustomerDetails"
+                        android:text="Customer Details"
+                        android:textColor="@color/shagiGray"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="24dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBarCus"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toTopOf="@id/tvCustomerDetails"
+                        app:layout_constraintRight_toRightOf="@id/etNationalID"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+
+                    <EditText
+                        android:id="@+id/etNationalID"
+                        android:inputType="text|textCapCharacters"
+                        android:hint="Enter Customer's National ID"
+                        android:background="@drawable/edit_text_background"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="4dp"
+                        android:textSize="15sp"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:minWidth="200dp"
+                        app:layout_constraintTop_toBottomOf="@id/tvCustomerDetails"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvCustomerName"
+                        android:hint="Customer Name"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintLeft_toLeftOf="@id/etNationalID"
+                        app:layout_constraintTop_toBottomOf="@id/etNationalID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvCustomerSurname"
+                        android:hint="Customer"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintRight_toRightOf="@id/etNationalID"
+                        app:layout_constraintTop_toBottomOf="@id/etNationalID"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardReg"
+                        android:visibility="gone"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="1px"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginTop="24dp"
+                        app:cardBackgroundColor="@color/grayish"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/tvCustomerName"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp">
+
+                        <TextView
+                            android:id="@+id/tvCusReg"
+                            android:text="Customer not registered! Click to register"
+                            android:textColor="@color/blackish"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:layout_gravity="center"
+                            android:paddingTop="4dp"
+                            android:paddingStart="15dp"
+                            android:paddingEnd="15dp"
+                            android:paddingBottom="4dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card3"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/card2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_marginBottom="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvCustomerLoanDetails"
+                        android:text="Customer Loan Details"
+                        android:textColor="@color/shagiGray"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="24dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvCreditL"
+                        android:text="Credit Limit"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintLeft_toLeftOf="@id/tvCustomerLoanDetails"
+                        app:layout_constraintTop_toBottomOf="@id/tvCustomerLoanDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvCreditLimit"
+                        android:hint="*********"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="24dp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvCreditL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvSpend"
+                        android:text="The customer can Spend: "
+                        android:textColor="@color/gray"
+                        android:textSize="13sp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintLeft_toLeftOf="@id/tvCreditL"
+                        app:layout_constraintTop_toBottomOf="@id/tvCreditL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvSpendingAmount"
+                        android:hint="*********"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="24dp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvSpend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardPay"
+                android:visibility="gone"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="1px"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="24dp"
+                app:cardBackgroundColor="@color/shagiGray"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:text="Proceed with Credit Application"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:layout_gravity="center"
+                    android:paddingTop="4dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

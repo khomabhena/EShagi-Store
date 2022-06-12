@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitish"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".LoanApplication"
+    tools:showIn="@layout/activity_loan_applicationc">
+
+    <View
+        android:id="@+id/viewBackground"
+        android:background="@color/colorPrimaryLight"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="150dp" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:text="E-"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMuto"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="Shagi"
+        android:textColor="@color/colorYellow"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/tvTitle"
+        app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:src="@drawable/shagi3"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="@id/card1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitleLoan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:text="Loan Application"
+        android:textColor="@color/shagiGray"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/ivLogo"
+        app:layout_constraintRight_toRightOf="@id/ivLogo"
+        app:layout_constraintTop_toBottomOf="@id/ivLogo" />
+
+    <ImageView
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="@id/card1"
+        app:srcCompat="@drawable/ic_support"
+        android:padding="13dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/ivLogo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+
+        <ScrollView
+            android:fillViewport="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toTopOf="@id/etAmount"
+                    app:layout_constraintRight_toRightOf="@id/viewMFI"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:id="@+id/tvEnter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Total Purchase"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/etAmount"/>
+
+                <TextView
+                    android:id="@+id/tvSign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintTop_toTopOf="@id/etAmount"
+                    app:layout_constraintBottom_toBottomOf="@id/etAmount"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/etAmount"
+                    android:inputType="none"
+                    android:hint="10000"
+                    android:textSize="15sp"
+                    android:background="@drawable/edit_text_background"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvEnter"
+                    app:layout_constraintLeft_toRightOf="@id/tvSign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvZWL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ZWL"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintTop_toTopOf="@+id/etAmount"
+                    app:layout_constraintLeft_toRightOf="@id/etAmount"
+                    app:layout_constraintBottom_toBottomOf="@id/etAmount"/>
+
+                <TextView
+                    android:id="@+id/tvBankName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="Bank Name"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvEnter" />
+
+                <TextView
+                    android:id="@+id/tvAccountNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="101668434125"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/grayish2"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvBankName"
+                    app:layout_constraintRight_toRightOf="@id/tvBankName"/>
+
+                <TextView
+                    android:id="@+id/tvSelectMicroFinance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="Let customer select Microfinance of choice"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/grayish2"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@id/etAmount"
+                    app:layout_constraintLeft_toLeftOf="@id/etAmount"/>
+
+                <View
+                    android:id="@+id/viewMFI"
+                    android:background="@color/grayish"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvSelectMicroFinance"
+                    app:layout_constraintLeft_toLeftOf="@id/tvPaymentP"
+                    app:layout_constraintRight_toRightOf="@id/tvPaymentPeriod"
+                    android:layout_width="0dp"
+                    android:layout_height="1px" />
+
+                <LinearLayout
+                    android:id="@+id/llMFISelection"
+                    android:gravity="end"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="6dp"
+                    app:layout_constraintTop_toBottomOf="@id/viewMFI"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewSelection"
+                        android:foregroundGravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvSelectPaymentPeriod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="Select Microfinance"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/grayish2"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@id/llMFISelection"
+                    app:layout_constraintLeft_toLeftOf="@id/etAmount"/>
+
+                <View
+                    android:id="@+id/viewSPP"
+                    android:background="@color/grayish"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvSelectPaymentPeriod"
+                    app:layout_constraintLeft_toLeftOf="@id/tvPaymentP"
+                    app:layout_constraintRight_toRightOf="@id/tvPaymentPeriod"
+                    android:layout_width="0dp"
+                    android:layout_height="1px" />
+
+                <TextView
+                    android:id="@+id/tvPaymentP"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    android:text="Payment Period"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toBottomOf="@id/viewSPP"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvPaymentPeriod"
+                    android:textStyle="bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="3 Months"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/grayish2"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toTopOf="@id/tvPaymentP"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:max="23"
+                    android:progress="2"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/text_background"
+                    app:layout_constraintTop_toBottomOf="@id/tvPaymentPeriod"
+                    app:layout_constraintLeft_toLeftOf="@id/cardApply"
+                    app:layout_constraintRight_toRightOf="@id/cardApply"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp" />
+
+                <TextView
+                    android:id="@+id/tvSelectDisbursement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="Disbursement Account"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/grayish2"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@id/seekBar"
+                    app:layout_constraintLeft_toLeftOf="@id/etAmount"/>
+
+                <View
+                    android:id="@+id/viewSD"
+                    android:background="@color/grayish"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvSelectDisbursement"
+                    app:layout_constraintLeft_toLeftOf="@id/tvPaymentP"
+                    app:layout_constraintRight_toRightOf="@id/tvPaymentPeriod"
+                    android:layout_width="0dp"
+                    android:layout_height="1px" />
+
+                <TextView
+                    android:id="@+id/tvDisbursement"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="16dp"
+                    android:textStyle="bold"
+                    android:text="Enter Customer OTP"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_width="0dp"
+                    app:layout_constraintTop_toBottomOf="@id/viewSD"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <EditText
+                    android:id="@+id/etOTP"
+                    android:inputType="numberPassword"
+                    android:hint="Customer OTP"
+                    android:textSize="15sp"
+                    android:background="@drawable/edit_text_background"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="4dp"
+                    android:layout_marginTop="8dp"
+                    android:minWidth="250dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvDisbursement"
+                    app:layout_constraintLeft_toRightOf="@id/tvSign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:background="@color/grayish"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@id/etOTP"
+                    app:layout_constraintLeft_toLeftOf="@id/etOTP"
+                    app:layout_constraintRight_toRightOf="@id/etOTP"
+                    android:layout_width="0dp"
+                    android:layout_height="1px" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardApply"
+                    android:onClick="applyForLoan"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="1px"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardBackgroundColor="@color/colorPrimaryLight"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@id/view2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:text="Apply for Credit"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="17sp"
+                        android:layout_gravity="center"
+                        android:paddingTop="4dp"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

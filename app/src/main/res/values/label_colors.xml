@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="pressed_color">#6a00897b</drawable>
+    <drawable name="normal_color">#00b62ffa</drawable>
+    <drawable name="pressed_color_red">#6a890009</drawable>
+</resources>

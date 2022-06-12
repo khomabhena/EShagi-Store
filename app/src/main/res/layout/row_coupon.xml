@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardTicketR"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="3dp"
+        card_view:cardBackgroundColor="@color/whitish"
+        card_view:cardCornerRadius="4dp"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:layout_constraintLeft_toLeftOf="parent"
+        card_view:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="170dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/viewR"
+                android:background="@color/colorPrimary"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvCategoryR"
+                android:text="Valid In Store and Online"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#3b3b3b"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:layout_constraintLeft_toRightOf="@+id/viewR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvTicketR"
+                android:visibility="invisible"
+                android:text="EVENT TICKET 1"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:textAllCaps="true"
+                android:fontFamily="serif"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:layout_constraintRight_toRightOf="parent"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvTimeR"
+                android:visibility="invisible"
+                android:text="20:30"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="serif"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                card_view:layout_constraintTop_toBottomOf="@+id/tvTicketR"
+                card_view:layout_constraintLeft_toRightOf="@+id/viewR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvAmount"
+                android:text="$5,000.00"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="serif"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                card_view:layout_constraintTop_toBottomOf="@+id/tvTicketR"
+                card_view:layout_constraintRight_toRightOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvVenueR"
+                android:visibility="invisible"
+                android:text="Club 27"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:textAllCaps="true"
+                android:fontFamily="serif"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                card_view:layout_constraintTop_toBottomOf="@+id/tvTimeR"
+                card_view:layout_constraintLeft_toRightOf="@id/viewR"
+                card_view:layout_constraintRight_toLeftOf="@+id/tvMerchantName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvMerchantName"
+                android:text="Pick n Pay"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textAllCaps="true"
+                android:fontFamily="serif"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="10dp"
+                card_view:layout_constraintTop_toBottomOf="@+id/tvTimeR"
+                card_view:layout_constraintRight_toRightOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvNameR"
+                android:visibility="gone"
+                android:text="We appreciate your business"
+                android:textSize="12sp"
+                android:textColor="#565656"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                card_view:layout_constraintTop_toBottomOf="@+id/tvVenueR"
+                card_view:layout_constraintLeft_toRightOf="@id/viewR"
+                card_view:layout_constraintRight_toRightOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:gravity="start"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="20dp"
+                card_view:layout_constraintTop_toBottomOf="@id/tvNameR"
+                card_view:layout_constraintLeft_toRightOf="@id/viewR"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:hint="Coupon type: "
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tvMerchantNameX"
+                    android:text="Applied as bank credit"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:fontFamily="serif"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvPriceR"
+                android:visibility="invisible"
+                android:text="$10"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:fontFamily="serif"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                card_view:layout_constraintTop_toBottomOf="@+id/tvNameR"
+                card_view:layout_constraintRight_toRightOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintLeft_toLeftOf="parent"
+                card_view:layout_constraintRight_toRightOf="@+id/viewR"
+                card_view:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:text="C"
+                    android:textColor="#1f444d"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:text="O"
+                    android:textColor="#1f444d"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:text="U"
+                    android:textColor="#1f444d"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:text="P"
+                    android:textColor="#1f444d"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:text="O"
+                    android:textColor="#1f444d"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:text="N"
+                    android:textColor="#1f444d"
+                    android:textSize="10sp" />
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

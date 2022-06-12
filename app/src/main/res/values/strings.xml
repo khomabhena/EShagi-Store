@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">E-Shagi Merchant</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_checkout">Checkout</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_add_categories">AddCategories</string>
+    <string name="title_activity_add_goods">AddGoods</string>
+    <string name="title_activity_login">Login</string>
+    <string name="loanAgreement">I, the undersigned, request and authorise my Employer named above to deduct from my monthly salary the amounts due and payable by me at any particular time, and pay the amount so deducted to Homelink Finance as repayment on a loan facility issued by Homelink Finance to me. I further understand that this is an irrevocable instruction and cannot be cancelled by me until all amounts due have been paid to Homelink Finance. Should my employer for any reason, not deduct any of the amounts in terms of this request, I shall consider the amounts unpaid and if due undertake to pay Homelink Finance such sums. I further understand and undertake that Homelink Finance will receive all payments in terms of this request without prejudice to its rights for recovery of amounts owed, and shall regard the receipt of this request by Homelink Finance as receipt of the same by my said employer. In the event of my death or retirement, resignation or termination of employment of any accrued benefits, dues, gratuities, reimbursement, or any amount payable by the employer shall be paid to Homelink Finance to settle the outstanding balance of the loan. All payments shall be made to Homelink Finance in United States Dollars Currency free of any deductions at address or into such bank account, as may be directed from time to time. I acknowledge and agree that in the event of my loan(s) being rescheduled or my taking on an additional loan, the terms of the loan agreement and Salary Deduction Authorisation Form shall operate in favour of Homelink Finance in respect to the rescheduled loan and additional loan, together with any ammendments, as if the Salary Deductions Authorisation Form had been signed and executed by me.</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="title_activity_loan_application">LoanApplication</string>
+    <string name="title_activity_orders">Orders</string>
+    <string name="title_activity_ordered_items">OrderedItems</string>
+    <string name="title_activity_items">Items</string>
+    <string name="title_activity_coupons">Coupons</string>
+</resources>
